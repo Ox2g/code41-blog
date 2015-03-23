@@ -62,7 +62,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: phase
+theme: landscape
+
+## Rss
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+## Sitemap
+sitemap:
+    path: sitemap.xml
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
