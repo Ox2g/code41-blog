@@ -15,17 +15,14 @@ categories:
 \*\*加粗\*\* **加粗**   
 \_\_加粗\_\_ __加粗__ 
 
-this is `important` text. and percentage signs : % and `%`
+this is `important` text. \`important\`
 
-This is a paragraph with a footnote (builtin parser only). [^note-id]
+## 缩进
+> 缩进
+>> 缩进缩进
+>>> 123
 
-Insert `[ TOC ]` without spaces to generate a table of contents (builtin parsers only).
-
-## Indentation
-> Here is some indented text
->> even more indented
-
-## Titles
+## 标题
 # Big title (h1)
 ## Middle title (h2)
 ### Smaller title (h3)
@@ -33,7 +30,7 @@ Insert `[ TOC ]` without spaces to generate a table of contents (builtin parsers
 ##### and so on (hX)
 ###### and so on (hX)
 
-## Example lists (1)
+## 列表
 
  - bullets can be `-`, `+`, or `*`
  - bullet list 1
@@ -47,70 +44,31 @@ Insert `[ TOC ]` without spaces to generate a table of contents (builtin parsers
  + bullet list 4
  * bullet list 5
 
-## Links
+## 超链接
 
 This is an [example inline link](http://lmgtfy.com/) and [another one with a title](http://lmgtfy.com/ "Hello, world").
 
-Links can also be reference based : [reference 1][ref1] or [reference 2 with title][ref2].
-
-References are usually placed at the bottom of the document
-
-## Images
+## 图片
 
 A sample image :
 
 ![revolunet logo](http://www.revolunet.com/static/parisjs8/img/logo-revolunet-carre.jpg "revolunet logo")
 
-As links, images can also use references instead of inline links :
-
-![revolunet logo][revolunet-logo]
 
 
 ## Code
 
-It's quite easy to show code in markdown files.
+使用 ___\`\`\`__  对代码类型进行声明
 
-Backticks can be used to `highlight` some words.
+```java
+public Class Test extends BaseTest implements BaseInterface {
+    private static String testStr = "Hello World";
 
-Also, any indented block is considered a code block.  If `enable_highlight` is `true`, syntax highlighting will be included (for the builtin parser - the github parser does this automatically).
+    public static void main (String[] args) {
+        System.out.println(testStr);
+    }
+} 
 
-    <script>
-        document.location = 'http://lmgtfy.com/?q=markdown+cheat+sheet';
-    </script>
-
-## Math
-
-When `enable_mathjax` is `true`, inline math can be included \\(\frac{\pi}{2}\\) $\pi$
-
-Alternatively, math can be written on its own line:
-
-$$F(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) \, e^{ - i \omega t}dt$$
-
-\\[\int_0^1 f(t) \mathrm{d}t\\]
-
-\\[\sum_j \gamma_j^2/d_j\\]
-
-
-
-## GitHub Flavored Markdown
-
-If you use the Github parser, you can use some of [Github Flavored Markdown][gfm] syntax :
-
- * User/Project@SHA: revolunet/sublimetext-markdown-preview@7da61badeda468b5019869d11000307e07e07401
- * User/Project#Issue: revolunet/sublimetext-markdown-preview#1
- * User : @revolunet
-
-Some Python code :
-
-```python
-import random
-
-class CardGame(object):
-    """ a sample python class """
-    NB_CARDS = 32
-    def __init__(self, cards=5):
-        self.cards = random.sample(range(self.NB_CARDS), 5)
-        print 'ready to play'
 ```
 
 Some Javascript code :
@@ -132,82 +90,7 @@ async_call('/path/to/api', function(json) {
 })
 ```
 
-The Github Markdown also brings some [nice Emoji support][emoji] : :+1: :heart: :beer:
-
-[^note-id]: This is the text of the note. 
-
-## Parsers and Extensions
-
-Markdown Preview comes with **Python-Markdown** preloaded.
-
-### *Python-Markdown*
-
-The [Python-Markdown Parser][] provides support for several extensions.
-
-[Python-Markdown Parser]: https://github.com/waylan/Python-Markdown
-
-#### Extra Extensions
-
-* `abbr` -- [Abbreviations][]
-* `attr_list` -- [Attribute Lists][]
-* `def_list` -- [Definition Lists][]
-* `fenced_code` -- [Fenced Code Blocks][]
-* `footnotes` -- [Footnotes][]
-* `tables` -- [Tables][]
-* `smart_strong` -- [Smart Strong][]
-
-[Abbreviations]: http://pythonhosted.org/Markdown/extensions/abbreviations.html
-[Attribute Lists]: http://pythonhosted.org/Markdown/extensions/attr_list.html
-[Definition Lists]: http://pythonhosted.org/Markdown/extensions/definition_lists.html
-[Fenced Code Blocks]: http://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html
-[Footnotes]: http://pythonhosted.org/Markdown/extensions/footnotes.html
-[Tables]: http://pythonhosted.org/Markdown/extensions/tables.html
-[Smart Strong]: http://pythonhosted.org/Markdown/extensions/smart_strong.html
-
-
-You can enable them all at once using the `extra` keyword.
-
-    extensions: [ 'extra' ]
-
-If you want all the extras plus the `toc` extension,
-your settings would look like this:
-
-    {
-        ...
-        parser: 'markdown',
-        extensions: ['extra', 'toc'],
-        ...
-    }
-
-
-#### Other Extensions
-
-There are also some extensions that are not included in Markdown Extra
-but come in the standard Python-Markdown library.
-
-* `code-hilite` -- [CodeHilite][]
-* `html-tidy` -- [HTML Tidy][]
-* `header-id` -- [HeaderId][]
-* `meta_data` -- [Meta-Data][]
-* `nl2br` -- [New Line to Break][]
-* `rss` -- [RSS][]
-* `sane_lists` -- [Sane Lists][]
-* `smarty` -- [Smarty][]
-* `toc` -- [Table of Contents][]
-* `wikilinks` -- [WikiLinks][]
-
-[CodeHilite]:  http://pythonhosted.org/Markdown/extensions/code_hilite.html
-[HTML Tidy]:  http://pythonhosted.org/Markdown/extensions/html_tidy.html
-[HeaderId]:  http://pythonhosted.org/Markdown/extensions/header_id.html
-[Meta-Data]:  http://pythonhosted.org/Markdown/extensions/meta_data.html
-[New Line to Break]:  http://pythonhosted.org/Markdown/extensions/nl2br.html
-[RSS]:  http://pythonhosted.org/Markdown/extensions/rss.html
-[Sane Lists]:  http://pythonhosted.org/Markdown/extensions/sane_lists.html
-[Table of Contents]:  http://pythonhosted.org/Markdown/extensions/toc.html
-[WikiLinks]:  http://pythonhosted.org/Markdown/extensions/wikilinks.html
-[Smarty]: https://pythonhosted.org/Markdown/extensions/smarty.html
-
-## Examples
+## 表格
 
 ### 表格的用法
 
