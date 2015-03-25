@@ -4,11 +4,12 @@
 
 # Site
 title: code41's blog
-subtitle:
-description: code41's blog
+subtitle: 一个热爱瞎折腾的程序猴
+description: 目前就职于狗场的一个移动方向小程序猴，热爱移动的各种知识，html5、ios、android就是任性的爱。 
 author: code41
 language:
 timezone:
+email: lsy814@gmail.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -62,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: yilia
 
 ## Rss
 feed:
@@ -80,3 +81,4 @@ deploy:
   type: git
   repository: git@github.com:naruto900814/naruto900814.github.io.git
   branch: master
+  

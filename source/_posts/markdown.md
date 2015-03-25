@@ -46,7 +46,7 @@ this is `important` text. \`important\`
 
 ## 超链接
 
-This is an [example inline link](http://lmgtfy.com/) and [another one with a title](http://lmgtfy.com/ "Hello, world").
+This is an [example inline link](http://blog.code41.me/) and [another one with a title](http://blog.code41.me/ "code41's blog").
 
 ## 图片
 
