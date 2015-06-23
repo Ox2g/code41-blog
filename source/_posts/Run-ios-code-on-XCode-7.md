@@ -1,4 +1,4 @@
-title: "Run ios code on XCode 7"
+title: "使用XCode7在ios设备上真机调试"
 date: 2015-06-19 23:20:41
 tags:
 - ios
