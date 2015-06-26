@@ -20,5 +20,10 @@ categories:
 2. 推送分支到远程分支 => *git push origin* __BRANCH_NAME__
 3. 切换分支 => *git checkout* __BRANCH_NAME__
 
+## GIT Config 配置相关
+0. 修改git请求URL中的协议头 => *git config --global url."https://".insteadOf git://*
+> __[解决问题]__bower ECMDERR Failed to execute “git ls-remote ... exit code of #128
+
+1. 查看当前配置信息  => *git config --list*
 
 ## GIT 的忽略设置 __.gitignore__
