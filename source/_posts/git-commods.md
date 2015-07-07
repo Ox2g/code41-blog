@@ -25,5 +25,10 @@ categories:
 > __[解决问题]__bower ECMDERR Failed to execute “git ls-remote ... exit code of #128
 
 1. 查看当前配置信息  => *git config --list*
+2. 根据git仓库配置不同的用户名和密码
 
 ## GIT 的忽略设置 __.gitignore__
+
+## GIT的高级应用
+### GIT的服务器搭建
+### GIT的权限————gitolite
