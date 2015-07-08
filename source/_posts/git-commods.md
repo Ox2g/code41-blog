@@ -27,7 +27,15 @@ git log
 ```
 4. 添加和提交操作
 ```
+# 添加
+git add FILE        #添加文件
+git add *.FILE      #通配符添加文件
+git add .           #添加全部修改的文件
 
+# 提交
+git commit -m "要提交的说明Comment" FILE   # 提交 单个文件
+git commit -m "要提交的说明Comment" -a     # 提交 所有修改文件
+git commit -C head -a -amend              # 增补提交，不会产生新的提交历史
 ```
 
     #### *附：SSH操作*
