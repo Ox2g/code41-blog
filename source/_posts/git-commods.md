@@ -28,6 +28,8 @@ git add FILE        #添加文件
 git add *.FILE      #通配符添加文件
 git add .           #添加全部修改的文件
 
+# 还原add后的文件
+
 # 查看修改文件的差异
 git diff
 git diff FILE
@@ -39,7 +41,14 @@ git commit -C head -a -amend              # 增补提交，不会产生新的提
 
 # 查看提交日志
 git log
-git log --pretty=oneline        #缩略查看提交日志
+git log --pretty=oneline        # 一行查看提交日志
+
+# 还原commit后的操作，还原节点后的提交日志不能查看了
+git reset --hard COMMIT_ID      # 按照COMMIT_ID还原文件，COMMIT_ID可以只写前几位
+git reset --hard HEAD^          # 还原上次的文件，如果^^，则还原上上次
+
+# 查看GIT操作命令历史记录
+git reflog
 ```
 
     #### *附：SSH操作*
@@ -150,8 +159,7 @@ git config --list
 >* .gitignore配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效
 
 ## TODO:GIT的高级操作
-1. commit查看提交日志 => *git reflog*
-2. 丢失找回操作
+1.tag管理操作
 
 ## TODO:GIT的服务器搭建
 0. 服务器的搭建
