@@ -1,4 +1,4 @@
-title: "TODO:GIT基础知识和命令"
+title: "GIT基础知识和命令"
 date: 2015-06-25 22:40:36
 tags:
 - 基础
@@ -9,6 +9,7 @@ categories:
 ---
 
 ## GIT 常用命令及基本操作
+
 0. 查看本地文件的git的状态
 ```
 git status
@@ -21,7 +22,7 @@ git init
 ```
 git remote add origin URL
 ```
-3. 添加和提交操作
+3. 常用基本操作
 ```
 # 添加
 git add FILE        #添加文件
@@ -53,6 +54,19 @@ git reset --hard HEAD^          # 还原上次的文件，如果^^，则还原�
 
 # 查看GIT操作命令历史记录
 git reflog
+
+# 删除文件
+git rm FILE     # 删除文件
+git checkout -- FILE # 删错找回
+
+# 推送本地文件
+git push
+
+# 拉取远程文件
+git pull
+
+# 克隆远程仓库
+git clone URL
 ```
 
     #### *附：GIT工作区与暂存区*
@@ -76,25 +90,6 @@ git reflog
     ```
     + SSH密钥使用密码（可不配置）
     + 在git仓库中配置(*如果将id_rsa.pub放到另外机器的 ~/.ssh.authorized_keys中，可以通过ssh和scp无密码登录访问*)
-
-
-## TODO:GIT 分支操作
-0. 查看远程分支
-```
-git branch -a
-```
-1. 查看本地分支
-```
-git branch
-```
-2. 推送分支到远程分支
-```
-git push origin BRANCH_NAME
-```
-3. 切换分支
-```
-git checkout BRANCH_NAME
-```
 
 
 ## GIT Config 配置相关
@@ -157,18 +152,3 @@ git config --list
     ssh -T shaw@demo.com
     ```
 
-## TODO:GIT 的忽略设置 __.gitignore__
->__忽略规则__
->* 以斜杠“/”开头表示目录
->* 以星号“*”通配多个字符
->* 以问号“?”通配单个字符
->* 以方括号“[]”包含单个字符的匹配列表
->* 以叹号“!”表示不忽略(跟踪)匹配到的文件或目录
->* .gitignore配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效
-
-## TODO:GIT的高级操作
-1.tag管理操作
-
-## TODO:GIT的服务器搭建
-0. 服务器的搭建
-1. GIT的权限————gitolite
