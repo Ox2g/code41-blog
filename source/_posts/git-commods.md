@@ -28,6 +28,8 @@ git add FILE        #添加文件
 git add *.FILE      #通配符添加文件
 git add .           #添加全部修改的文件
 
+# 还原add后的文件
+
 # 查看修改文件的差异
 git diff
 git diff FILE
@@ -39,8 +41,19 @@ git commit -C head -a -amend              # 增补提交，不会产生新的提
 
 # 查看提交日志
 git log
-git log --pretty=oneline        #缩略查看提交日志
+git log --pretty=oneline        # 一行查看提交日志
+
+# 还原commit后的操作，还原节点后的提交日志不能查看了
+git reset --hard COMMIT_ID      # 按照COMMIT_ID还原文件，COMMIT_ID可以只写前几位
+git reset --hard HEAD^          # 还原上次的文件，如果^^，则还原上上次
+
+# 查看GIT操作命令历史记录
+git reflog
 ```
+
+    #### *附：GIT工作区与暂存区*
+    > 修改前   =>  添加内容&修改文件   =>    git add     =>  git commit
+    > 无状态   =>  文件在工作区       =>    文件在暂存区  =>  文件在本地分支
 
     #### *附：SSH操作*
     > 为了减少git提交时反复输入用户名和密码的操作，故大部分采取SSH连接的方式进行提交，而通过本机的公钥文件配置在git服务器上就可以完成不用密码的提交操作。
@@ -150,8 +163,7 @@ git config --list
 >* .gitignore配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效
 
 ## TODO:GIT的高级操作
-1. commit查看提交日志 => *git reflog*
-2. 丢失找回操作
+1.tag管理操作
 
 ## TODO:GIT的服务器搭建
 0. 服务器的搭建
