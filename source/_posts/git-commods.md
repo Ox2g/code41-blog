@@ -28,7 +28,11 @@ git add FILE        #添加文件
 git add *.FILE      #通配符添加文件
 git add .           #添加全部修改的文件
 
-# 还原add后的文件
+# 还原add前的文件，就是将文件中修改的内容都revet
+git checkout -- FILE
+
+# 还原add后，commit前的文件到add前的状态
+git reset HEAD FILE
 
 # 查看修改文件的差异
 git diff
