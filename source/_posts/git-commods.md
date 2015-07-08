@@ -28,6 +28,10 @@ git add FILE        #添加文件
 git add *.FILE      #通配符添加文件
 git add .           #添加全部修改的文件
 
+# 查看修改文件的差异
+git diff
+git diff FILE
+
 # 提交
 git commit -m "要提交的说明Comment" FILE   # 提交 单个文件
 git commit -m "要提交的说明Comment" -a     # 提交 所有修改文件
@@ -35,6 +39,7 @@ git commit -C head -a -amend              # 增补提交，不会产生新的提
 
 # 查看提交日志
 git log
+git log --pretty=oneline        #缩略查看提交日志
 ```
 
     #### *附：SSH操作*
@@ -126,6 +131,14 @@ git config --list
         IdentityFile ~/.ssh/id_rsa.shaw.pub
     ```
     > 以上配置，访问github时，根据不同的用户名，使用不同的公钥文件；通过在git的repo中配置不同的user就可以使用以上配置按不同用户提交；当git提交到不同的GIT仓库的时候就会使用不同配置，从而使用不同的账户和公钥文件。
+    - 删除历史信任记录
+    ```
+    rm ~/.ssh/known_hosts
+    ```
+    - 禁用伪终端分配
+    ```
+    ssh -T shaw@demo.com
+    ```
 
 ## TODO:GIT 的忽略设置 __.gitignore__
 >__忽略规则__
