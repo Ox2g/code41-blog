@@ -21,11 +21,7 @@ git init
 ```
 git remote add origin URL
 ```
-3. 查看提交日志
-```
-git log
-```
-4. 添加和提交操作
+3. 添加和提交操作
 ```
 # 添加
 git add FILE        #添加文件
@@ -36,6 +32,9 @@ git add .           #添加全部修改的文件
 git commit -m "要提交的说明Comment" FILE   # 提交 单个文件
 git commit -m "要提交的说明Comment" -a     # 提交 所有修改文件
 git commit -C head -a -amend              # 增补提交，不会产生新的提交历史
+
+# 查看提交日志
+git log
 ```
 
     #### *附：SSH操作*
