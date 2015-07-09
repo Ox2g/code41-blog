@@ -9,7 +9,7 @@ categories:
 - 基础知识
 ---
 
-## TODO:GIT 分支操作
+## GIT 分支操作
 ```
 # 查看远程分支
 git branch -a
@@ -22,6 +22,18 @@ git push origin BRANCH_NAME
 
 # 切换分支
 git checkout BRANCH_NAME
+# 创建分支
+git branch BRANCH_NAME
+
+# 创建并切换分支
+git checkout -b BRANCH_NAME
+
+# 合并分支(在需要合并代码的分支中，选择目的分支进行合并)
+git merge BASE_BRANCHE_NAME
+git merge BASE_BRANCHE_NAME --no-ff     #保留日志方式合并（推荐）
+
+# 删除分支
+git branch -d BRANCH_NAME
 ```
 
 ## TODO:GIT 的忽略设置 __.gitignore__
