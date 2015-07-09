@@ -20,6 +20,12 @@ git branch
 # 推送分支到远程分支
 git push origin BRANCH_NAME
 
+# 获取远程分支
+git checkout -b BRANCH_NAME origin/BRANCH_NAME
+
+# 建立本地分支和远程分支的关联
+git branch --set-upstream BRANCH_NAME origin/BRANCH_NAME
+
 # 切换分支
 git checkout BRANCH_NAME
 # 创建分支
@@ -34,6 +40,24 @@ git merge BASE_BRANCHE_NAME --no-ff     #保留日志方式合并（推荐）
 
 # 删除分支
 git branch -d BRANCH_NAME
+git branch -D BRANCH_NAME   #强制删除分支
+
+# 
+```
+
+### 分支中工作现场
+> 当存在需要修理的bug时，而手边工作为修改完成的情况下，可以保存现有的工作现场，而在bug修正后进行工作现场恢复，继续之前的开发工作
+
+```
+# 保存工作现场
+git stash
+
+# 查看工作现场列表
+git stash list
+
+# 恢复工作现场
+git stash pop   #恢复上一个工作现场
+git stash apply stash@{0}
 ```
 
 ## TODO:GIT 的忽略设置 __.gitignore__
