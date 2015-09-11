@@ -7,11 +7,13 @@ menu:
   tags: /tags
   #commonweal: /404.html
 
+
+avatar: "https://avatars0.githubusercontent.com/u/5361460?v=3&u=fba7111af267cba8fa0eab29a88caf7b0fa34b4a&s=140"
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo,next"
+keywords: "code41,ios,android,html5,blog"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -21,8 +23,8 @@ rss:
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
 # Avialable: default | linecons | fifty-shades | feather
-icon_font: default
-#icon_font: fifty-shades
+#icon_font: default
+icon_font: fifty-shades
 #icon_font: feather
 #icon_font: linecons
 
@@ -91,3 +93,15 @@ images: images
 
 # Theme version
 version: 0.4.5.1
+
+social:
+  github: "https://github.com/naruto900814"
+  mail: "mailto:lsy814@gmail.com"
+
+duoshuo_shortname: code41
+
+baidushare: true
+
+baidu_analytics: bdc762c38b421f16915ab1748d916ec2
+
+since: 2015
