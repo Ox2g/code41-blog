@@ -22,6 +22,9 @@ git init
 ```
 git remote add origin URL
 ```
+
+<!-- more -->
+
 3. 常用基本操作
 ```
 # 添加

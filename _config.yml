@@ -79,6 +79,6 @@ sitemap:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:naruto900814/naruto900814.github.io.git
+  repository: https://github.com/naruto900814/naruto900814.github.io.git
   branch: master
   
