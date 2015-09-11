@@ -41,7 +41,11 @@ git merge BASE_BRANCHE_NAME --no-ff     #保留日志方式合并（推荐）
 # 删除分支
 git branch -d BRANCH_NAME
 git branch -D BRANCH_NAME   #强制删除分支
+
+# 删除远程分支
+git push origin :BRANCH_NAME
 ```
+__PS:__如果需要reset远程分支状态的时候，可以先删除远程分支再进行重新push
 
 ### 分支中工作现场
 > 当存在需要修理的bug时，而手边工作为修改完成的情况下，可以保存现有的工作现场，而在bug修正后进行工作现场恢复，继续之前的开发工作
