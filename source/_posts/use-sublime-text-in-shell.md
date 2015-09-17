@@ -31,6 +31,7 @@ alias subl="/d/bin/Sublime\ Text\ 3/subl.exe"
 # 同理，再配置一个chrome的Shell命令
 alias 
 ```
+<!-- more -->
 
 - Mac:
 
