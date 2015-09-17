@@ -36,7 +36,7 @@ alias
 - Mac:
 
 ```bash
-alias subl='/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 ```
 
 PS: 具体程序名称等需要按照对应的修改下配置内容
