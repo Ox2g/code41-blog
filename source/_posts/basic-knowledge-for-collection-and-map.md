@@ -70,6 +70,14 @@ categories:
 4. HashMap在添加元素时，如果空间不够，自动扩展空间，扩展操作会创建新的Entry数组，并将老的Entry数组拷贝到新的数组中；
 5. 线程不安全。
 
+### TreeMap的实现原理
+1. TreeMap是基于红黑树实现的，无容量限制；
+2. TreeMap是线程不安全的。
+
+### HashSet和TreeSet的实现原理
+1. HashSet是基于HashMap实现的；
+2. TreeSet是基于TreeMap实现的；
+3. 线程不安全
 
 Java集合类的关系图谱如下所示：
 ![Java集合类关系图谱](basic-knowledge-for-collection-and-map/relation-map-for-collection-and-map.png)
