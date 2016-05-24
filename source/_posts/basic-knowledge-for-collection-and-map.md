@@ -56,12 +56,26 @@ categories:
 改善：使用LinkedList进行频繁的添加和删除操作。
 
 ### ArrayList和LinkedList的区别
+1. 两者都是线程不安全的。
+2. ArrayList是基于对象数组实现，插入和删除操作性能消耗较大；而LinkedList是基于链表方式实现的，插入和删除性能消耗小，只需要操作指针就可以。
+3. ArrayList查询时时间复杂度O(1)，故ArrayList查询性能好；而LinkedList需要遍历，故查询性能LinkedList较差。
 
 ### ArrayList和Vector的区别
+1. 两者都实现了List接口，都是通过对象数组进行数据存储。
+2. Vector的方法是使用synchronized关键字进行了同步锁定，是线程安全的；而ArrayList是线程不安全的。
+3. ArrayList在容量不足的情况下，会新增50%的空间；而Vector会新增100%的空间；但是两者在插入新对象时都是使用Arrays.copyOf()方法，将老对象拷贝到扩充后的对象数组中的。
 
 ### ListIterator和Iterator的区别
+1. 都有hasNext和next方法，都可以进行向后的遍历。
+2. 都含有remove方法，都可以对元素进行删除。
+3. ListIterator含有hasPrevious和previous方法，可以进行向前遍历。
+4. ListIterator含有add和set方法，除了删除还可以完成元素的添加和修改操作。
+5. ListIterator可以通过nextIndex和previousIndex获取元素的索引位置。
 
 ### ConcurrentHashMap的实现原理
+1. 实现原理和HashMap类似，但是引入了segment，故每次put操作只锁某一个segment，而对其他segment无影响。
+2. hash的实现是final类型，故每个value的key都不会重复。
+3. get操作的变量是volatile的变量，保证了获取之前都是写操作完成的，故保证了数据的实时性。
 
 ### HashMap的实现原理
 1. 采用数组方式存储key和value构成的Entry对象，无容量限制；
