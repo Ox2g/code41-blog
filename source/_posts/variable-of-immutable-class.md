@@ -34,10 +34,10 @@ categories:
     System.out.println(intE == intF);
     ```
     
-    - intA变量的声明方式会被优化为Integer.valueOf(11)，所以intA的变量是指向方法区上127的指针；
-    - 而intB变量是在堆上新声明对象，故两个对象无法在==中返回true；
-    - 而equals判断的是两个变量中的value是否相等，并非对象是否指向一个；
-    - 由于Integer的缓存区间是在-128至127之间，故intE==intF返回true，而intC == intD返回false。
+- intA变量的声明方式会被优化为Integer.valueOf(11)，所以intA的变量是指向方法区上127的指针；
+- 而intB变量是在堆上新声明对象，故两个对象无法在==中返回true；
+- 而equals判断的是两个变量中的value是否相等，并非对象是否指向一个；
+- 由于Integer的缓存区间是在-128至127之间，故intE==intF返回true，而intC == intD返回false。
 
 ### String类
 > String类在声明变量的时候和Integer包装类类似，String声明对象会产生两种效果，一种会创建到方法区中，一种会在堆上创建。
@@ -54,8 +54,8 @@ categories:
     System.out.println(a == b);
     ```
     
-    - 变量a会在堆中创建对象，变量c会在方法区中创建，变量b指针指向，在方法区中，和变量a值一样的变量指针；
-    - equals方法只判断value值是否相等，不判断指针指向的是否为同一个对象，故equals方法中变量都是一样的。
+- 变量a会在堆中创建对象，变量c会在方法区中创建，变量b指针指向，在方法区中，和变量a值一样的变量指针；
+- equals方法只判断value值是否相等，不判断指针指向的是否为同一个对象，故equals方法中变量都是一样的。
     
 ### 其他包装类
 > Double包装类是双精度数字的包装类，故没有缓存。
