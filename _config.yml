@@ -4,8 +4,8 @@
 
 # Site
 title: code41's blog
-subtitle: 一个热爱瞎折腾的程序猴
-description: 目前就职于狗场的一个移动方向小程序猴，热爱移动的各种知识，html5、ios、android就是任性的爱。 
+subtitle: 奔三...
+description: 想转行金融得到小富小贵的程序员。 
 author: code41
 language: zh-Hans
 timezone:
@@ -13,7 +13,7 @@ email: lsy814@gmail.com
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://blog.code41.me
+url: http://code41.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

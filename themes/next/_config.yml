@@ -98,7 +98,9 @@ social:
   github: "https://github.com/naruto900814"
   mail: "mailto:lsy814@gmail.com"
 
-duoshuo_shortname: code41
+#duoshuo_shortname: code41
+changyan_appid: cysXNh7qW
+changyan_appkey: prod_bc872bce39d564818454ac7040ac4126
 
 baidushare: true
 

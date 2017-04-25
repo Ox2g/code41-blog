@@ -27,8 +27,25 @@
             <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
         {% endif %}
 
+        {% if (theme.changyan_appid and theme.changyan_appkey and page.title) %}
+            <!-- 畅言热评文章-->
+            <div id="cyHotnews" role="cylabs" data-use="hotnews"></div>
+        {% endif %}
+
         {% if page.comments %}
           <div class="comments" id="comments">
+
+            {% if (theme.changyan_appid and theme.changyan_appkey and page.title) %}
+              <!-- 畅言评论 -->
+              <div id="SOHUCS" sid="{{ page.title }}"></div>
+              <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+              <script type="text/javascript">
+                window.changyan.api.config({appid: '{{ theme.changyan_appid }}', conf: '{{ theme.changyan_appkey }}'});
+              </script>
+              <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+              <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid={{ theme.changyan_appid }}"></script>
+            {% endif %}
+
             {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
               <div class="ds-thread" data-thread-key="{{ page.path }}"
                    data-title="{{ page.title }}" data-url="{{ page.permalink }}">
