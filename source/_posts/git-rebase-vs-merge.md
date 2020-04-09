@@ -14,12 +14,12 @@ categories:
 
 ### 详解
 0. 模拟当前本地分支和远程分支的提交点情况
-    - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1504415696066.png)
+    - ![](http://img3.0x29.cn/markdown/1504415696066.png)
 1. Merge是对分支的合并操作，按照提交的顺序排列全部Commits
-    - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1504415729898.png)
+    - ![](http://img3.0x29.cn/markdown/1504415729898.png)
     - 创建一个新的Commit，按照提交时间顺序规整全部Commit提交点
 2. Rebase也是对分支的合并操作，但是远程Commit的全部提交点会排列在本地的为提交点顺序之前
-    - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1504415756949.png)
+    - ![](http://img3.0x29.cn/markdown/1504415756949.png)
     - 保持远程的提交顺序，重新复制创建出本地的全部提交点备份，并排列备份提交到远程顺序之后
     - 优点
         + 保证全部GIT的提交链的顺序准确性

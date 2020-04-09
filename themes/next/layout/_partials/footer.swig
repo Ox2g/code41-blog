@@ -5,7 +5,11 @@
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
+  <span class="author" itemprop="copyrightHolder">
+    <a class="theme-link" href="{{ theme.beian_url }}">
+      {{ theme.beian }}
+    </a>
+  </span>
 </div>
 
 <div class="powered-by">

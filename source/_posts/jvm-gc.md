@@ -12,14 +12,14 @@ tags:
 - GC就是对垃圾进行回收
 - GC是为了使开发人员不需要显式分配内存和回收内存，从而减少开发的难度
 - 但是，GC的实际效果却是...
-- ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488970912818.gif)
+- ![](http://img3.0x29.cn/markdown/1488970912818.gif)
 
 #### 2. 哪些地方可以回收？哪些东西要回收？
 - JVM基础-内存空间
     + JVM规范下的结构示意图
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488944811319.png)
+        * ![](http://img3.0x29.cn/markdown/1488944811319.png)
     + JVM内存示意图[JDK8持久代已经由元空间替换]
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488946190664.png)
+        * ![](http://img3.0x29.cn/markdown/1488946190664.png)
 - 回收哪些地方？
     + 方法区[回收条件苛刻很难回收，既回收的效果不佳]
         * 对类型卸载
@@ -43,7 +43,7 @@ tags:
                 + 方法区中常量引用对象
                 + 本地方法栈中的引用对象
         * 示例图
-            - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488958141212.png)
+            - ![](http://img3.0x29.cn/markdown/1488958141212.png)
     + 定义引用[Reference]
         * Strong Reference > Soft Reference > Weak Reference > Phantom Reference
 
@@ -56,7 +56,7 @@ tags:
             - 缺点
                 + 效率问题：标记和清除的操作过程，效率都比较低。
                 + 空间问题：清除后会产生大量不连续的内存碎片，导致大对象无可用的连续内存。
-            - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488958759088.png)
+            - ![](http://img3.0x29.cn/markdown/1488958759088.png)
         * Copying
             - 可用内存划分为大小相等的两部分，当内存用完后，将存活对象所占用的内存空间复制到另外一半中，然后回收掉用完的一半。
             - 优点
@@ -64,10 +64,10 @@ tags:
                 + 无内存碎片问题
             - 缺点
                 + 内存只使用一半，浪费较大
-            - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488958705168.png)
+            - ![](http://img3.0x29.cn/markdown/1488958705168.png)
         * Mark-Compact
             - 针对老年代的特点，让所有存活的对象向一端移动，清理边界以外的全部内存空间。
-            - ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488958734183.png)
+            - ![](http://img3.0x29.cn/markdown/1488958734183.png)
         * Generational Collection[分代收集]
             - 根据存活周期不同将内存划分多块，然后针对不同不同周期（年代）对象使用不同的，最应当的垃圾回收算法。
             - java堆中划分为新生代和老年代，针对新生代(每次垃圾回收，有大批对象死亡，)使用Copying算法，而针对老年代使用Mark-Compact算法。
@@ -79,13 +79,13 @@ tags:
         * 新生代收集使用
         * 复制算法
         * 单线程，适合于单核
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488967461931.png)
+        * ![](http://img3.0x29.cn/markdown/1488967461931.png)
     + ParNew收集器
         * 新生代收集使用
         * 复制算法
         * Server模式首选收集器
         * 新生代回收采用多线程处理
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488967494306.png)
+        * ![](http://img3.0x29.cn/markdown/1488967494306.png)
     + Parallel Scavenge收集器
         * 新生代收集使用
         * 复制算法
@@ -97,13 +97,13 @@ tags:
         * 标记整理算法
         * 单线程
         * 作为CMS收集器出错后的备选方案
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488967461931.png)
+        * ![](http://img3.0x29.cn/markdown/1488967461931.png)
     + Parallel Old收集器
         * 老生代收集使用
         * 标记整理算法
         * 多线程整理
         * 搭配Parallel Scavenge收集器的老生代收集使用
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488967670110.png)
+        * ![](http://img3.0x29.cn/markdown/1488967670110.png)
     + CMS(Concurrent Mark Sweep)收集器
         * 老生代收集使用
         * 与用户线程共同并发标记和并发清理
@@ -115,7 +115,7 @@ tags:
             - 产生碎片
             - 无法处理浮动垃圾(并发标记过程中用户产生的垃圾)
             - 占用用户线程的CPU资源
-        * ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1488969530314.png)
+        * ![](http://img3.0x29.cn/markdown/1488969530314.png)
     + G1[Garbage First]
         * 基本要求
             - 多核CPU
@@ -214,4 +214,4 @@ tags:
 - 这些回收技术都是越来越好用，但这些并不能成为大家不优化现有代码的原因，我们需要为将来留有余地
 
 #### 7. 流程图文件
-[流程图](http://om6u6x9f9.bkt.clouddn.com/fileGC4JVM.key)
+[流程图](http://img3.0x29.cn/fileGC4JVM.key)

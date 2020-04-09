@@ -35,7 +35,7 @@ categories:
     + 了解自己，爱上自己
     + 心情愉快
 
-![](http://om6u6x9f9.bkt.clouddn.com/markdown/1503846386025.png)
+![](http://img3.0x29.cn/markdown/1503846386025.png)
 
 ### 什么是断舍离
 - 物品要用才有价值
@@ -88,7 +88,7 @@ categories:
 - 集中一点进行整理
     + 专注的能力[类似于GTD]
 - 不断的筛选
-    + ![](http://om6u6x9f9.bkt.clouddn.com/markdown/1503846698211.png)
+    + ![](http://img3.0x29.cn/markdown/1503846698211.png)
 - 不断的筛选[进一步思考]
     + GTD的Inbox处理筛选
     + 事情不能一蹴而就，需要不断的处理，是个for循环的过程

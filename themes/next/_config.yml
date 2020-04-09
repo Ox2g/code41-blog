@@ -107,3 +107,7 @@ baidushare: true
 baidu_analytics: bdc762c38b421f16915ab1748d916ec2
 
 since: 2015
+
+# beian
+beian: 辽ICP备15004214号-1
+beian_url: http://www.beian.miit.gov.cn
